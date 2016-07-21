@@ -1,0 +1,45 @@
+.reg_main_frame {
+    width: 1000px;
+    margin: 5px auto;
+}
+
+.left_img {
+    float: left;
+    width: 300px;
+    height: 400px;
+    margin-left: 40px;
+    background-color: #c5ccac;
+}
+
+.reg_form {
+    width: 655px;
+    margin-left: 345px;
+}
+
+.reg_form table {
+    width: 600px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.table_td1 {
+    text-align: right;
+    width: 110px;
+    font-family: "PingFang SC";
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+    padding-right: 10px;
+}
+
+.table_td2 {
+    width: 220px;
+}
+
+.spe_working {
+    display: none;
+}
+
+.spe_educate {
+    display: none;
+}

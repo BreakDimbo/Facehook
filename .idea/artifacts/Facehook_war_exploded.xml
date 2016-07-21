@@ -1,16 +1,20 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="XiaoneiSite:war exploded">
+  <artifact type="exploded-war" name="Facehook:war exploded">
     <output-path>$PROJECT_DIR$/target/xiaoneiSite</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="XiaoneiSite" />
+          <element id="module-output" name="Facehook" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="mysql-connector-java-5.1.39-bin" />
+          <element id="library" level="application" name="tomcat" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/xiaoneiSite/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="XiaoneiSite/web/Web" />
+      <element id="javaee-facet-resources" facet="Facehook/web/Web" />
     </root>
   </artifact>
 </component>

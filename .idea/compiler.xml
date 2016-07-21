@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Facehook" />
         <module name="XiaoneiSite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Facehook" target="1.5" />
       <module name="XiaoneiSite" target="1.5" />
     </bytecodeTargetLevel>
   </component>

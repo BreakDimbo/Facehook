@@ -1,0 +1,24 @@
+.head {
+    height: 120px;
+    width: 1000px;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+}
+
+.head .img2 {
+    float: left;
+}
+
+.head .nav {
+    list-style: none;
+    float: right;
+}
+
+.nav li {
+    height: 20px;
+    width: 70px;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-weight: bold;
+    float: left;
+}
