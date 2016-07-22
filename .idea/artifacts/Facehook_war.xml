@@ -1,12 +1,14 @@
 <component name="ArtifactManager">
   <artifact type="war" name="Facehook:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="xiaoneiSite.war">
+    <root id="archive" name="Facehook.war">
       <element id="artifact" artifact-name="Facehook:war exploded" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
           <element id="library" level="application" name="mysql-connector-java-5.1.39-bin" />
           <element id="library" level="application" name="tomcat" />
+          <element id="library" level="application" name="aspectjrt-1.6.0" />
+          <element id="library" level="application" name="aspectj.weaver-1.7.1.RELEASE" />
         </element>
       </element>
     </root>
