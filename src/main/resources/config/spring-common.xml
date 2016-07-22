@@ -11,7 +11,7 @@
     <context:annotation-config/>
     <!--aop+事务管理-->
     <aop:aspectj-autoproxy/>
-    <tx:annotation-driven transaction-manager="txManager"/>
+
 
     <!--datasource-->
     <bean id="myDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -33,7 +33,8 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-                <prop key="connection.pool_size">1</prop>
+                <prop key="connection.pool_size">5</prop>
+                <prop key="hbm2ddl.auto">update</prop>
                 <prop key="show_sql">true</prop>
                 <prop key="format_sql">true</prop>
             </props>
@@ -44,6 +45,8 @@
     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <tx:annotation-driven transaction-manager="txManager"/>
+
     <!--just a test-->
     <bean id="testBean" class="com.limbo.test.TestBean">
         <property name="name" value="test"/>
