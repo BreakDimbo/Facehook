@@ -49,7 +49,7 @@
         <span class="font2">因为真实 所以精彩</span>
         <p>
             校内存知己<br/>
-            <input type="image" onclick="location.href='../user/register.do'" src="../images/front/register.jpg" />
+            <input type="image" onclick="location.href='../reg/register.do'" src="../images/front/register.jpg" />
         </p>
     </div>
     <!-- 寻找你的朋友 -->

@@ -22,7 +22,7 @@
     <img class="img1" src="../images/front/andy_warhol1.jpg">
     <img class="img2" src="../images/front/Facebook1.jpg">
     <ul class="nav">
-        <li onmouseleave="changeNM(this)" onmousemove="changeBD(this)"><a href="../user/register.do">注册</a></li>
+        <li onmouseleave="changeNM(this)" onmousemove="changeBD(this)"><a href="../reg/register.do">注册</a></li>
         <li onmouseleave="changeNM(this)" onmousemove="changeBD(this)"><a href="#">设为首页</a></li>
         <li onmouseleave="changeNM(this)" onmousemove="changeBD(this)"><a href="#">加入收藏</a></li>
         <li onmouseleave="changeNM(this)" onmousemove="changeBD(this)"><a href="#">帮助</a></li>

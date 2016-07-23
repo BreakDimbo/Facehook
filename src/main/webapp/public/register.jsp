@@ -159,12 +159,12 @@
                 <div id="proTbl">
                     <table width="100%">
                         <tr>
-
                             <td>
-                                <a onclick='setProUnis(this)' href="javascript:void(0);"
-                                   class="xh" id="省 id" coId="对应国家 id">省名字</a>
+                                <c:forEach items="${provinceList}" var="province">
+                                    <a onclick='setProUnis(this)' href="javascript:void(0);"
+                                       class="xh" id="${province.id}" coId="${province.countryId}">${province.name}</a>
+                                </c:forEach>
                             </td>
-
                         </tr>
                     </table>
                 </div>
