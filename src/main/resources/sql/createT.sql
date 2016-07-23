@@ -8,7 +8,7 @@ id int not null primary key auto_increment,
 name varchar(32) not null,
 countryId int,
 FOREIGN KEY (countryId) REFERENCES country(id)
-) TYPE=INNODB
+)
 
 --中国省份表
 create table localProvince(

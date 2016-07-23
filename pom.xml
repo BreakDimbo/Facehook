@@ -45,13 +45,21 @@
             <artifactId>log4j</artifactId>
             <version>1.2.14</version>
         </dependency>
+        <!--end-->
         <!--hibernate-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>5.2.1.Final</version>
         </dependency>
-        <!---->
+        <!--end-->
+        <!--JSTL-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!--end-->
     </dependencies>
     <repositories>
         <repository>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/city.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/country.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/createT.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/junior.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/localProvince.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/localcity.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/province.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/senior.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/techSchool.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/town.sql" dialect="MySQL" />
+  </component>
+</project>

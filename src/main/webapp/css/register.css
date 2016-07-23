@@ -43,3 +43,14 @@
 .spe_educate {
     display: none;
 }
+
+/*学校选择控件*/
+.divSch {
+    background-color: white;
+    border-style: solid;
+    position: absolute;
+    top: 430px;
+    left: 400px;
+    border-color: blanchedalmond;
+    border-width: 6px;
+}

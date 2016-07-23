@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -26,12 +27,10 @@ public class CityController {
     }
 
     @RequestMapping("/listcities")
-    public String listCities(){
+    public String listCities(HttpServletRequest request){
         System.out.println("进入 action");
-        List<CityEntity> cities = cityMgr.loadCities();
-        for (CityEntity c : cities) {
-            System.out.println(c.getName());
-        }
+        List<CityEntity> cities = cityMgr.listAllCities();
+        request.setAttribute("cityList", cities);
         return "index";
     }
 

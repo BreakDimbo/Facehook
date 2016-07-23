@@ -25,7 +25,6 @@
           <file>file://$MODULE_DIR$/src/main/resources/config/spring-mvc-config.xml</file>
         </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring-beans.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/spring-common.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/spring-mvc-config.xml</file>
         </fileset>
@@ -55,6 +54,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="mysql-connector-java-5.1.39-bin" level="application" />
     <orderEntry type="library" name="tomcat" level="application" />
+    <orderEntry type="library" name="aspectjrt-1.6.0" level="application" />
+    <orderEntry type="library" name="aspectj.weaver-1.7.1.RELEASE" level="application" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.1.RELEASE" level="project" />
@@ -83,7 +84,6 @@
     <orderEntry type="library" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec:1.0.0.Beta1" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
-    <orderEntry type="library" name="aspectjrt-1.6.0" level="application" />
-    <orderEntry type="library" name="aspectj.weaver-1.7.1.RELEASE" level="application" />
+    <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
   </component>
 </module>
