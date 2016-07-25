@@ -17,7 +17,8 @@
             <scope>test</scope>
         </dependency>
         <!--end-->
-        <!--spring-->
+
+        <!--spring start-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -38,7 +39,8 @@
             <artifactId>spring-orm</artifactId>
             <version>4.3.1.RELEASE</version>
         </dependency>
-        <!--end-->
+        <!--spring end-->
+
         <!--log4j-->
         <dependency>
             <groupId>log4j</groupId>
@@ -46,6 +48,7 @@
             <version>1.2.14</version>
         </dependency>
         <!--end-->
+
         <!--hibernate-->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -53,13 +56,52 @@
             <version>5.2.1.Final</version>
         </dependency>
         <!--end-->
-        <!--JSTL-->
+
+        <!--aspect start-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.7.3</version>
+        </dependency>
+        <!--aspectj end-->
+
+        <!--servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
         <!--end-->
+
+        <!--mysql-->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
+        </dependency>
+
+        <!--tomcate-->
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!---->
+
+
     </dependencies>
     <repositories>
         <repository>

@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
     <title>注册页面</title>
@@ -26,11 +28,11 @@
     <%--右侧注册表格--%>
     <div class="reg_form">
         <span class="font6">来吧,加入我们</span><br/>
-        <form action="../user/addUser.do" method="post">
+        <form:form action="../reg/addUser" method="post" modelAttribute="userForm">
             <table>
                 <tr>
                     <td class="table_td1">姓名:</td>
-                    <td class="table_td2"><input type="text" name="name"></td>
+                    <td class="table_td2"><form:input type="text" path="name"/></td>
                     <td><span class="spanVal">请输入真实姓名</span></td>
                 </tr>
                 <tr>
@@ -134,7 +136,7 @@
                     <td></td>
                 </tr>
             </table>
-        </form>
+        </form:form>
     </div>
 
 </div>

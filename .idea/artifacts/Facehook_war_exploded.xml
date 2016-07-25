@@ -34,11 +34,12 @@
           <element id="library" level="project" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec:1.0.0.Beta1" />
           <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.7.1" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.7.3" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
-          <element id="library" level="application" name="mysql-connector-java-5.1.39-bin" />
-          <element id="library" level="application" name="tomcat" />
-          <element id="library" level="application" name="aspectjrt-1.6.0" />
-          <element id="library" level="application" name="aspectj.weaver-1.7.1.RELEASE" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.39" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.3" />
+          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

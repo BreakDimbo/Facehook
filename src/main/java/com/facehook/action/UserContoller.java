@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 public class UserContoller {
 
 
-    @RequestMapping(value = "/addUser")
+    @RequestMapping(value = "/add")
     public String addUser(HttpServletRequest request) {
 
         String name = request.getParameter("name");
