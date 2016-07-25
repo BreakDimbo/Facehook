@@ -16,6 +16,8 @@ public class UserContoller {
     @RequestMapping(value = "/addUser")
     public String addUser(HttpServletRequest request) {
 
+        String name = request.getParameter("name");
+
         return "individual/home";
     }
 

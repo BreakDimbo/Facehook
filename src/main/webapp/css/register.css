@@ -47,10 +47,20 @@
 /*学校选择控件*/
 .divSch {
     background-color: white;
-    border-style: solid;
     position: absolute;
     top: 430px;
     left: 400px;
-    border-color: blanchedalmond;
-    border-width: 6px;
+    border-color: #E5E5E5;
+    border-width: 1px;
+    font-size: 12px;
+}
+
+.divSch a {
+    font-size: 12px;
+    font-family: "Heiti SC";
+    color: slateblue;
+}
+
+.divSch table {
+    border-color: #E5E5E5;
 }

@@ -1,17 +1,37 @@
 package com.facehook.service.impl;
 
+import com.facehook.dao.ProvinceDao;
+import com.facehook.domain.CountryEntity;
+import com.facehook.domain.ProvinceEntity;
 import com.facehook.service.ProvinceMgr;
-import com.facehook.service.base.MgrBaseImpl;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by Break.D on 7/23/16.
  */
-@Component
-public class ProvinceMgrImpl extends MgrBaseImpl implements ProvinceMgr {
-    public List<Object> getAllProvince() {
-        return this.getResults("from ProvinceEntity p where p.countryId = 1", null);
+@Service
+public class ProvinceMgrImpl implements ProvinceMgr {
+
+    private ProvinceDao provinceDao;
+
+    public ProvinceDao getProvinceDao() {
+        return provinceDao;
+    }
+
+    @Resource
+    public void setProvinceDao(ProvinceDao provinceDao) {
+        this.provinceDao = provinceDao;
+    }
+
+    public List<ProvinceEntity> getAllProvince() {
+        return provinceDao.getAllProvinces();
+    }
+
+    public List<ProvinceEntity> showProByCountryId(int id) {
+        return provinceDao.getProByCountryId(id);
     }
 }

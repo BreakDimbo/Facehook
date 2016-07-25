@@ -9,5 +9,5 @@ import java.util.List;
  * Created by Break.D on 7/22/16.
  */
 public interface CityDao extends DaoBaseInter {
-    List<CityEntity> listAllCities();
+    List<CityEntity> getAllCities();
 }

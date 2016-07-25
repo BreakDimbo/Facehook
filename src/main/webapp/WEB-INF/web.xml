@@ -30,7 +30,19 @@
 
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>/.do</url-pattern>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <!--end-->
+
+    <!--servlet for ajax-->
+    <servlet>
+        <servlet-name>changeInfo</servlet-name>
+        <servlet-class>com.facehook.servlet.ChangeInfo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>changeInfo</servlet-name>
+        <url-pattern>/changeInfo</url-pattern>
     </servlet-mapping>
     <!--end-->
 

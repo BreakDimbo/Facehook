@@ -2,6 +2,7 @@ package com.facehook.action;
 
 import com.facehook.service.CountryMgr;
 import com.facehook.service.ProvinceMgr;
+import com.facehook.service.UniversityMgr;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -17,6 +18,16 @@ public class RegisterAction {
 
     private CountryMgr countryMgr;
     private ProvinceMgr provinceMgr;
+    private UniversityMgr universityMgr;
+
+    public CountryMgr getCountryMgr() {
+        return countryMgr;
+    }
+
+    @Resource
+    public void setCountryMgr(CountryMgr countryMgr) {
+        this.countryMgr = countryMgr;
+    }
 
     public ProvinceMgr getProvinceMgr() {
         return provinceMgr;
@@ -27,13 +38,13 @@ public class RegisterAction {
         this.provinceMgr = provinceMgr;
     }
 
-    public CountryMgr getCountryMgr() {
-        return countryMgr;
+    public UniversityMgr getUniversityMgr() {
+        return universityMgr;
     }
 
     @Resource
-    public void setCountryMgr(CountryMgr countryMgr) {
-        this.countryMgr = countryMgr;
+    public void setUniversityMgr(UniversityMgr universityMgr) {
+        this.universityMgr = universityMgr;
     }
 
     @RequestMapping(value = "/register")
@@ -46,9 +57,10 @@ public class RegisterAction {
         request.setAttribute("countryList", countryMgr.listAllCountry());
 
 //        省
-        request.setAttribute("provinceList", provinceMgr.getResults("from ProvinceEntity where id = ?", new Object[]{new Integer(1)}));
+        request.setAttribute("provinceList", provinceMgr.showProByCountryId(1));
 
 //        大学
+        request.setAttribute("universityList", universityMgr.showUniByProCouId(1, 1));
 
         return "public/register";
     }

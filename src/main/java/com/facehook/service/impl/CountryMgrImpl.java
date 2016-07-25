@@ -3,9 +3,7 @@ package com.facehook.service.impl;
 import com.facehook.dao.CountryDao;
 import com.facehook.domain.CountryEntity;
 import com.facehook.service.CountryMgr;
-import com.facehook.service.base.MgrBaseImpl;
-import com.facehook.service.base.MgrBaseInter;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -13,8 +11,8 @@ import java.util.List;
 /**
  * Created by Break.D on 7/23/16.
  */
-@Component
-public class CountryMgrImpl extends MgrBaseImpl implements CountryMgr {
+@Service
+public class CountryMgrImpl implements CountryMgr {
     private CountryDao countryDao;
 
     public CountryDao getCountryDao() {
@@ -27,6 +25,6 @@ public class CountryMgrImpl extends MgrBaseImpl implements CountryMgr {
     }
 
     public List<CountryEntity> listAllCountry() {
-        return countryDao.listAllCountry();
+        return countryDao.getAllCountries();
     }
 }

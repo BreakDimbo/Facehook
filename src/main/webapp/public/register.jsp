@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/register.css" type="text/css"/>
     <script type="text/javascript" src="../js/publicJs.js"></script>
     <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../ajax/ajax_min_uni.js"></script>
 </head>
 <body>
 <jsp:include page="head.jsp"/>
@@ -29,7 +30,7 @@
             <table>
                 <tr>
                     <td class="table_td1">姓名:</td>
-                    <td class="table_td2"><input type="text" name="input"></td>
+                    <td class="table_td2"><input type="text" name="name"></td>
                     <td><span class="spanVal">请输入真实姓名</span></td>
                 </tr>
                 <tr>
@@ -54,10 +55,9 @@
                 <tr class="spe_working">
                     <td class="table_td1">居住地:</td>
                     <td class="table_td2">
-                        <select>
+                        <select name="homePro">
                             <option>--省份--</option>
                             <option>北京市</option>
-                            <option>上海市</option>
                         </select>
                     </td>
                     <td></td>
@@ -65,10 +65,9 @@
                 <tr class="spe_working">
                     <td class="table_td1">选择城市:</td>
                     <td class="table_td2">
-                        <select>
+                        <select name="homeCity">
                             <option>--城市--</option>
                             <option>成都市</option>
-                            <option>包头市</option>
                         </select>
                     </td>
                     <td></td>
@@ -94,23 +93,26 @@
                 </tr>
                 <tr class="spe_educate">
                     <td class="table_td1">大学:</td>
-                    <td class="table_td2"><input type="text" name="??"></td>
+                    <td class="table_td2">
+                        <input id="university" onclick="showTable()" type="text" name="universityId">
+                        <input id="uuniversity" type="hidden">
+                    </td>
                     <td></td>
                 </tr>
                 <%--大学生 end--%>
                 <tr>
                     <td class="table_td1">电子邮箱:<br>&nbsp;</td>
-                    <td class="table_td2"><input type="text" name="??"><br>
+                    <td class="table_td2"><input type="text" name="email"><br>
                         <span style="font-size: 12px">没有邮箱? <a href="#">注册 Gmail</a></span></td>
                 </tr>
                 <tr>
                     <td class="table_td1">设置密码</td>
-                    <td class="table_td2"><input type="password" name="??"></td>
+                    <td class="table_td2"><input type="password" name="pwd"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="table_td1">确认密码:</td>
-                    <td class="table_td2"><input type="password" name="??"></td>
+                    <td class="table_td2"><input type="password" name="pwd2"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -127,8 +129,7 @@
                 <tr>
                     <td class="table_td1"></td>
                     <td class="table_td2"><input type="checkbox" name="??"/><span class="font3">&nbsp;我已阅读并同意遵守</span>
-                        <a
-                                href="#">校内网服务条款</a>
+                        <a href="#">校内网服务条款</a>
                     </td>
                     <td></td>
                 </tr>
@@ -142,14 +143,15 @@
 
 <%--显示大学表格--%>
 <div class="divSch" id="uniDiv"
-     style="display: block; position: absolute; top: 50px; left: 750px">
-    <table border="1" align="center" height="380px" width="500px"
+     style="display: none; position: absolute; top: 50px; left: 750px">
+    <table align="center" height="380px" width="500px"
            bordercolor="blanchedalmond">
         <!-- 显示所有国家 -->
         <tr>
             <td bordercolor="blanchedalmond" width="500px">
                 <c:forEach items="${countryList}" var="country">
-                    <a id="${country.id}" onclick="setCoUnis(this)" class="xh" href="javascript:void(0);">${country.name}</a> |
+                    <a id="${country.id}" onclick="setCoUnis(this)" class="xh"
+                       href="javascript:void(0);">${country.name}</a> |
                 </c:forEach>
             </td>
         </tr>
@@ -162,7 +164,7 @@
                             <td>
                                 <c:forEach items="${provinceList}" var="province">
                                     <a onclick='setProUnis(this)' href="javascript:void(0);"
-                                       class="xh" id="${province.id}" coId="${province.countryId}">${province.name}</a>
+                                       class="xh" id="${province.id}"  name="${province.countryId}">${province.name} </a>
                                 </c:forEach>
                             </td>
                         </tr>
@@ -177,12 +179,15 @@
                      id="uniTbl">
                     <table width="100%">
                         <tr>
-                            <td>
+                            <c:forEach items="${universityList}" var="university" varStatus="sp">
+                            <td><li>
                                 <a onclick='showMyUni(this)' href="javascript:void(0);"
-                                   class="xh" id="大学 id">大学名字</a></li>
-                            </td>
+                                   class="xh" id="${university.id}">${university.name} </a>
+                            </li></td>
+                            <c:if test="${sp.count%3==0}"></tr>
+                        <tr></c:if>
+                            </c:forEach>
                         </tr>
-
                     </table>
                 </div>
             </td>
