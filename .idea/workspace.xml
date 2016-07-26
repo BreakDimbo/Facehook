@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bed75b12-b2d1-4e02-9804-3665617e1e5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/action/LoginController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/UserUniversityDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/impl/UserDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/impl/UserUniversityDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dto/LoginInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dto/UserForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/UserMgr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/UserUniversityMgr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/impl/UserMgrImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/impl/UserUniversityMgrImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/action/UserForm.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/action/RegisterAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/action/RegisterController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/dao/base/DaoBaseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/base/DaoBaseImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/dao/base/DaoBaseInter.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/dao/base/DaoBaseInter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/CityEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/CityEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/CountryEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/CountryEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/JuniorEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/JuniorEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/LocalCityEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/LocalCityEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/LocalProvinceEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/LocalProvinceEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/PrimarySchoolEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/PrimarySchoolEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/ProvinceEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/ProvinceEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/SeniorEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/SeniorEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/TechSchoolEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/TechSchoolEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/TownEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/TownEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UniversityEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UniversityEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserNetEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserNetEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserSeniorEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserSeniorEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserUniversityEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UserUniversityEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UsersEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/domain/UsersEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/service/UniversityMgr.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/UniversityMgr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/facehook/service/impl/UniversityMgrImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/facehook/service/impl/UniversityMgrImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/createT.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/createT.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ajax/ajax_min_uni.js" afterPath="$PROJECT_DIR$/src/main/webapp/ajax/ajax_min_uni.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/public/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/public/register.jsp" />
     </list>
     <ignored path="XiaoneiSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -611,7 +573,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.PluginsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1271,7 +1233,7 @@
       <workItem from="1469447010014" duration="778000" />
       <workItem from="1469447855274" duration="1674000" />
       <workItem from="1469450715415" duration="10239000" />
-      <workItem from="1469502197982" duration="3336000" />
+      <workItem from="1469502197982" duration="3479000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1469099014220</created>
@@ -1336,11 +1298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469451037791</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="stable 1.1">
+      <created>1469529149012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1469529149012</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135643000" />
+    <option name="totallyTimeSpent" value="135786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1448,7 +1417,8 @@
     <MESSAGE value="增加注册逻辑-增加分层设计" />
     <MESSAGE value="使用 ajax 完成大学的选择" />
     <MESSAGE value="解决表单提交问题,解决中文问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决表单提交问题,解决中文问题" />
+    <MESSAGE value="stable 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable 1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1508,6 +1478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
           <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
