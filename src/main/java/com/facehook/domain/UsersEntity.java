@@ -1,5 +1,7 @@
 package com.facehook.domain;
 
+import org.hibernate.annotations.DynamicInsert;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -9,6 +11,7 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "users", schema = "facehook", catalog = "")
+@DynamicInsert
 public class UsersEntity {
     private int id;
     private String email;
@@ -55,7 +58,7 @@ public class UsersEntity {
     private PrimarySchoolEntity primarySchoolByPrimarySch;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -509,7 +512,7 @@ public class UsersEntity {
         this.userSeniorsById = userSeniorsById;
     }
 
-    @OneToMany(mappedBy = "usersByUserId")
+    @OneToMany(mappedBy = "user")
     public Collection<UserUniversityEntity> getUserUniversitiesById() {
         return userUniversitiesById;
     }

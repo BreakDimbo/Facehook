@@ -18,7 +18,7 @@ public class TechSchoolEntity {
     private Collection<UsersEntity> usersesById;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;

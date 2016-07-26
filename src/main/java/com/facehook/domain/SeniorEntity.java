@@ -18,7 +18,7 @@ public class SeniorEntity {
     private Collection<UserSeniorEntity> userSeniorsById;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;

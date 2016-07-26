@@ -18,7 +18,7 @@
 </c:forEach>--%>
 
 <%
-    response.sendRedirect("public/index.jsp");
+    response.sendRedirect("login/get");
 %>
 </body>
 </html>

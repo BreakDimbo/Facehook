@@ -5,6 +5,7 @@ import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -58,5 +59,9 @@ public abstract class DaoBaseImpl implements DaoBaseInter{
         }
         return query.list();
 
+    }
+
+    public Object loadById(Class clazz, Serializable id) {
+        return sessionFactory.getCurrentSession().get(clazz, id);
     }
 }

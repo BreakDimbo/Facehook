@@ -18,7 +18,7 @@ public class UniversityEntity {
     private Collection<UserUniversityEntity> userUniversitiesById;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -102,7 +102,7 @@ public class UniversityEntity {
         this.provinceByProId = provinceByProId;
     }
 
-    @OneToMany(mappedBy = "universityByUniversityId")
+    @OneToMany(mappedBy = "university")
     public Collection<UserUniversityEntity> getUserUniversitiesById() {
         return userUniversitiesById;
     }

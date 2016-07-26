@@ -11,4 +11,6 @@ public interface UniversityMgr {
     List<UniversityEntity> getAllUniversities();
 
     List<UniversityEntity> showUniByProCouId(int pId, int cId);
+
+    UniversityEntity getUniversityById(int id);
 }

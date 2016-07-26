@@ -14,7 +14,7 @@ public class LocalCityEntity {
 
     @Id
     @Column(name = "lc_id", nullable = false)
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getLcId() {
         return lcId;
     }

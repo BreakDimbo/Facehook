@@ -1,5 +1,5 @@
 create table country(
-	id int	not null primary key auto_increment,
+	id int not null primary key auto_increment,
 	name varchar(32) not null
 )
 --省份表
@@ -17,8 +17,8 @@ lp_name varchar(32) not null)
 
 --城市表
 create table city(
-	id	int	not null primary key auto_increment,
-	name	varchar(32) not null,
+	id int not null primary key auto_increment,
+	name varchar(32) not null,
 	proId	int references province(id),
 	FOREIGN KEY (proId) REFERENCES province(id)
 )

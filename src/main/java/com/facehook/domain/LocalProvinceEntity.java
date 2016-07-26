@@ -12,6 +12,7 @@ public class LocalProvinceEntity {
     private String lpName;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lp_id", nullable = false)
     public int getLpId() {
         return lpId;

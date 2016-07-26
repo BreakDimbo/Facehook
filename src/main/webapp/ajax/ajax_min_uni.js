@@ -133,6 +133,6 @@ function closeUniTbl(o) {
 function showMyUni(o) {
     $("#university").val(o.innerHTML);
     $("#uniDiv").css("display", "none");
-    $("#uuniversity").val(o.id);
+    $("#universityid").val(o.id);
 
 }

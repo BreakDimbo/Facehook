@@ -37,18 +37,18 @@
                 </tr>
                 <tr>
                     <td class="table_td1">性别:</td>
-                    <td class="table_td2"><input type="radio" name="sex">男<input type="radio" name="sex">女</td>
+                    <td class="table_td2"><form:radiobutton path="sex"/>男<form:radiobutton path="sex"/>女</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="table_td1">身份:</td>
                     <td class="table_td2">
-                        <select size="4" onchange="stateChange(this)">
-                            <option value="working">在职</option>
-                            <option value="educated">大学生</option>
-                            <option value="senior">中学生</option>
-                            <option value="none">以上都不是</option>
-                        </select>
+                        <form:select size="4" onchange="stateChange(this)" path="state">
+                            <form:option value="working">在职</form:option>
+                            <form:option value="educated">大学生</form:option>
+                            <form:option value="senior">中学生</form:option>
+                            <form:option value="none">以上都不是</form:option>
+                        </form:select>
                     </td>
                     <td></td>
                 </tr>
@@ -84,37 +84,37 @@
                 <tr class="spe_educate">
                     <td class="table_td1">类型:</td>
                     <td class="table_td2">
-                        <select>
-                            <option>本科</option>
-                            <option>硕士</option>
-                            <option>博士</option>
-                            <option>教师</option>
-                        </select>
+                        <form:select path="userType">
+                            <form:option value="graduated">本科</form:option>
+                            <form:option value="master">硕士</form:option>
+                            <form:option value="phd">博士</form:option>
+                            <form:option value="teacher">教师</form:option>
+                        </form:select>
                     </td>
                     <td></td>
                 </tr>
                 <tr class="spe_educate">
                     <td class="table_td1">大学:</td>
                     <td class="table_td2">
-                        <input id="university" onclick="showTable()" type="text" name="universityId">
-                        <input id="uuniversity" type="hidden">
+                        <input id="university" onclick="showTable()" type="text"/>
+                        <form:hidden id="universityid" path="universityId"/>
                     </td>
                     <td></td>
                 </tr>
                 <%--大学生 end--%>
                 <tr>
                     <td class="table_td1">电子邮箱:<br>&nbsp;</td>
-                    <td class="table_td2"><input type="text" name="email"><br>
+                    <td class="table_td2"><form:input type="text" path="email"/><br>
                         <span style="font-size: 12px">没有邮箱? <a href="#">注册 Gmail</a></span></td>
                 </tr>
                 <tr>
                     <td class="table_td1">设置密码</td>
-                    <td class="table_td2"><input type="password" name="pwd"></td>
+                    <td class="table_td2"><form:password path="pwd"/></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="table_td1">确认密码:</td>
-                    <td class="table_td2"><input type="password" name="pwd2"></td>
+                    <td class="table_td2"><form:password path="pwd2"/></td>
                     <td></td>
                 </tr>
                 <tr>

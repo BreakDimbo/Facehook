@@ -9,17 +9,15 @@ import javax.persistence.*;
 @Table(name = "userUniversity", schema = "facehook", catalog = "")
 public class UserUniversityEntity {
     private int id;
-    private Integer userId;
-    private Integer universityId;
     private Integer uniYear;
     private String userType;
     private String college;
     private String drom;
-    private UsersEntity usersByUserId;
-    private UniversityEntity universityByUniversityId;
+    private UsersEntity user;
+    private UniversityEntity university;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
@@ -29,25 +27,6 @@ public class UserUniversityEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "userId", nullable = true)
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    @Basic
-    @Column(name = "universityId", nullable = true)
-    public Integer getUniversityId() {
-        return universityId;
-    }
-
-    public void setUniversityId(Integer universityId) {
-        this.universityId = universityId;
-    }
 
     @Basic
     @Column(name = "uniYear", nullable = true)
@@ -97,8 +76,6 @@ public class UserUniversityEntity {
         UserUniversityEntity that = (UserUniversityEntity) o;
 
         if (id != that.id) return false;
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
-        if (universityId != null ? !universityId.equals(that.universityId) : that.universityId != null) return false;
         if (uniYear != null ? !uniYear.equals(that.uniYear) : that.uniYear != null) return false;
         if (userType != null ? !userType.equals(that.userType) : that.userType != null) return false;
         if (college != null ? !college.equals(that.college) : that.college != null) return false;
@@ -110,8 +87,6 @@ public class UserUniversityEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
-        result = 31 * result + (universityId != null ? universityId.hashCode() : 0);
         result = 31 * result + (uniYear != null ? uniYear.hashCode() : 0);
         result = 31 * result + (userType != null ? userType.hashCode() : 0);
         result = 31 * result + (college != null ? college.hashCode() : 0);
@@ -120,22 +95,22 @@ public class UserUniversityEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id", insertable = false, updatable = false)
-    public UsersEntity getUsersByUserId() {
-        return usersByUserId;
+    @JoinColumn(name = "userId", referencedColumnName = "id")
+    public UsersEntity getUser() {
+        return user;
     }
 
-    public void setUsersByUserId(UsersEntity usersByUserId) {
-        this.usersByUserId = usersByUserId;
+    public void setUser(UsersEntity usersByUserId) {
+        this.user = usersByUserId;
     }
 
     @ManyToOne
-    @JoinColumn(name = "universityId", referencedColumnName = "id", insertable = false, updatable = false)
-    public UniversityEntity getUniversityByUniversityId() {
-        return universityByUniversityId;
+    @JoinColumn(name = "universityId", referencedColumnName = "id")
+    public UniversityEntity getUniversity() {
+        return university;
     }
 
-    public void setUniversityByUniversityId(UniversityEntity universityByUniversityId) {
-        this.universityByUniversityId = universityByUniversityId;
+    public void setUniversity(UniversityEntity universityByUniversityId) {
+        this.university = universityByUniversityId;
     }
 }

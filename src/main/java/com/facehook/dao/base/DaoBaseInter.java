@@ -1,5 +1,6 @@
 package com.facehook.dao.base;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,5 +15,7 @@ public interface DaoBaseInter {
     void update(String hql, Object[] parameters);
 
     List getResults(String hql, Object[] parameters);
+
+    Object loadById(Class clazz, Serializable id);
 
 }

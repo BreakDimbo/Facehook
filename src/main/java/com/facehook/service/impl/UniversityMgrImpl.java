@@ -31,4 +31,8 @@ public class UniversityMgrImpl implements UniversityMgr {
     public List<UniversityEntity> showUniByProCouId(int pId, int cId) {
         return universityDao.getUniByProId(pId, cId);
     }
+
+    public UniversityEntity getUniversityById(int id) {
+        return (UniversityEntity) universityDao.loadById(UniversityEntity.class, id);
+    }
 }

@@ -19,7 +19,7 @@ public class TownEntity {
     private CityEntity cityByCityId;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     public int getId() {
         return id;
