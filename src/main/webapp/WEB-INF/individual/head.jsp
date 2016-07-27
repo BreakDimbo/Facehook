@@ -22,8 +22,8 @@
     <img class="img1" src="../images/front/andy_warhol1.jpg">
     <img class="img2" src="../images/front/Facebook1.jpg">
     <ul class="nav">
-        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="/xiaoneinew/login.do?flag=logout">首页</a></li>
-        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="/xiaoneinew/profile.do?flag=goHomePageUI">个人主页</a></li>
+        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="../login/get">首页</a></li>
+        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="../user/gotoHomePage">个人主页</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="#">修改</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="#">好友</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="#">应用</a></li>

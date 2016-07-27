@@ -1,6 +1,5 @@
 package com.limbo.test;
 
-import com.facehook.domain.CountryEntity;
 import org.hibernate.SessionFactory;
 
 import java.util.List;

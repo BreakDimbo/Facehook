@@ -1,8 +1,5 @@
 package com.limbo.test;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 /**
  * Created by Break.D on 7/22/16.
  */

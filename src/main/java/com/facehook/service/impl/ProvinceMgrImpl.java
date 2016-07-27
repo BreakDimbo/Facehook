@@ -1,10 +1,8 @@
 package com.facehook.service.impl;
 
 import com.facehook.dao.ProvinceDao;
-import com.facehook.domain.CountryEntity;
 import com.facehook.domain.ProvinceEntity;
 import com.facehook.service.ProvinceMgr;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

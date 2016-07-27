@@ -1,6 +1,5 @@
 package com.facehook.service;
 
-import com.facehook.dao.base.DaoBaseInter;
 import com.facehook.domain.ProvinceEntity;
 
 import java.util.List;

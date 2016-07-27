@@ -6,6 +6,7 @@ import com.facehook.service.UserMgr;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by Break.D on 7/25/16.
@@ -26,5 +27,13 @@ public class UserMgrImpl implements UserMgr {
 
     public void save(UsersEntity user) {
         userDao.save(user);
+    }
+
+    public UsersEntity checkUser(String email, String pwd) {
+        List<UsersEntity> users = userDao.getUser(email, pwd);
+        if (users.size() == 1) {
+            return users.get(0);
+        }
+        return null;
     }
 }

@@ -8,4 +8,6 @@ import com.facehook.domain.UsersEntity;
 public interface UserMgr {
 
     void save(UsersEntity user);
+
+    UsersEntity checkUser(String email, String pwd);
 }

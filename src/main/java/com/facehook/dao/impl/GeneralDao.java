@@ -1,7 +1,6 @@
 package com.facehook.dao.impl;
 
 import com.facehook.dao.base.DaoBaseImpl;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**

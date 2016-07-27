@@ -3,11 +3,8 @@ package com.facehook.dao.impl;
 import com.facehook.dao.CityDao;
 import com.facehook.dao.base.DaoBaseImpl;
 import com.facehook.domain.CityEntity;
-import org.hibernate.SessionFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**

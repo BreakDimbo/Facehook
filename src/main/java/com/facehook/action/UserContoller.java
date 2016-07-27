@@ -21,5 +21,10 @@ public class UserContoller {
         return "individual/home";
     }
 
+    @RequestMapping(value = "/gotoHomePage")
+    public String gotoHomePage() {
+        return "individual/homePage";
+    }
+
 
 }
