@@ -6,11 +6,13 @@ import com.facehook.service.UserMgr;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by Break.D on 7/25/16.
@@ -37,21 +39,28 @@ public class LoginController {
         return "public/index";
     }
 
-    @RequestMapping(value = "/check", method = RequestMethod.POST)
-    public String checkLoginInfo(@ModelAttribute LoginInfo loginInfo, Model model, HttpServletRequest request) {
+    //使用 request.getSession()设置的 session 会有问题,待研究
+    @PostMapping(value = "/check")
+    public String checkLoginInfo(@ModelAttribute("loginInfo") LoginInfo loginInfo, HttpSession session) {
         String email = loginInfo.getEmail();
         String pwd = loginInfo.getPwd();
 
         UsersEntity user = userMgr.checkUser(email, pwd);
 
         if (user != null) {
-            request.getSession().setAttribute("loginUser ", user);
+            session.setAttribute("loginUser", user);
+
             return "individual/home";
         } else {
             return "public/index";
         }
+    }
 
-
+    //退出登录
+    @RequestMapping(value = "/logout")
+    public String logout(HttpServletRequest request) {
+        request.getSession().invalidate();
+        return "forward:get";
     }
 
 }

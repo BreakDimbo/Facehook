@@ -4,8 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="../css/css/homePage.css" type="text/css"></link>
-    <link rel="stylesheet" href="../css/css/common.css" type="text/css"></link>
+    <link rel="stylesheet" href="../css/css/homePage.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/css/common.css" type="text/css"/>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript">
         <!--
@@ -95,7 +95,7 @@
 </head>
 <body>
 
-<jsp:include page="head.jsp"></jsp:include>
+<jsp:include page="head.jsp"/>
 <div class="homePage">
     <div class="homePage_intro">
 
@@ -109,14 +109,14 @@
                 <td onMouseOver="chgTblusers(this)"
                     onMouseOut="chgTblusers2(this)" id="editphoto">
                     &nbsp;
-                    <a href="../profile.do?flag=uploadPhotoUI" class="xh" id="editphotoa">更改我的头像</a>
+                    <a href="../upload/gotoUpload" class="xh" id="editphotoa">更改我的头像</a>
                 </td>
             </tr>
             <tr>
                 <td onMouseOver="chgTblusers(this)"
                     onMouseOut="chgTblusers2(this)" id="edit">
                     &nbsp;
-                    <a href="/self/basicInfo.jsp" class="xh" id="edita">编辑我的资料</a>
+                    <a href="/basicInfo.jsp" class="xh" id="edita">编辑我的资料</a>
                 </td>
             </tr>
             <tr>

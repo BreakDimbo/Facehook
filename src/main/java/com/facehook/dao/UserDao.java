@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface UserDao extends DaoBaseInter {
     List<UsersEntity> getUser(String email, String pwd);
+
+    void updatePhoto(UsersEntity user);
 }

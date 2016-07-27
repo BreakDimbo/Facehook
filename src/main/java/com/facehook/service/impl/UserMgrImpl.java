@@ -36,4 +36,8 @@ public class UserMgrImpl implements UserMgr {
         }
         return null;
     }
+
+    public void updatePhoto(UsersEntity user) {
+        userDao.updatePhoto(user);
+    }
 }

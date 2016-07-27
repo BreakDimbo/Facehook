@@ -1,5 +1,7 @@
 package com.facehook.dao.base;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,8 +16,11 @@ public interface DaoBaseInter {
 
     void update(String hql, Object[] parameters);
 
+    void updateAll(Object o);
+
     List getResults(String hql, Object[] parameters);
 
     Object loadById(Class clazz, Serializable id);
+
 
 }

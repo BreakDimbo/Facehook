@@ -22,7 +22,7 @@
     <img class="img1" src="../images/front/andy_warhol1.jpg">
     <img class="img2" src="../images/front/Facebook1.jpg">
     <ul class="nav">
-        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="../login/get">首页</a></li>
+        <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="../user/gotoHome">首页</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="../user/gotoHomePage">个人主页</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="#">修改</a></li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)"><a class="top" href="#">好友</a></li>
@@ -42,7 +42,7 @@
             <a class="anavi" href="#">隐私</a>
         </li>
         <li onmouseover="changeBG(this)" onmouseout="changeBG2(this)">
-            <a  class="anavi" href="#">退出</a>
+            <a  class="anavi" href="../login/logout">退出</a>
         </li>
     </ul>
 </div>

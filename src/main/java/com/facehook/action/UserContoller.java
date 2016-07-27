@@ -3,8 +3,6 @@ package com.facehook.action;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * Created by Break.D on 7/23/16.
  */
@@ -13,11 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 public class UserContoller {
 
 
-    @RequestMapping(value = "/add")
-    public String addUser(HttpServletRequest request) {
-
-        String name = request.getParameter("name");
-
+    @RequestMapping("/gotoHome")
+    public String gotoHome() {
         return "individual/home";
     }
 

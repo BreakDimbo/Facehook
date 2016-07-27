@@ -33,6 +33,7 @@ public abstract class DaoBaseImpl implements DaoBaseInter{
         sessionFactory.getCurrentSession().delete(object);
     }
 
+
     public void update(String hql, Object[] parameters) {
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         if (parameters != null && parameters.length > 0) {
@@ -41,6 +42,10 @@ public abstract class DaoBaseImpl implements DaoBaseInter{
             }
         }
         query.executeUpdate();
+    }
+
+    public void updateAll(Object o) {
+        getSessionFactory().getCurrentSession().update(o);
     }
 
     /**
