@@ -51,6 +51,7 @@ public class UsersEntity {
     private Collection<UserNetEntity> userNetsById;
     private Collection<UserSeniorEntity> userSeniorsById;
     private Collection<UserUniversityEntity> userUniversitiesById;
+    private Collection<AlbumEntity> albumsById;
     private ProvinceEntity provinceByHomePro;
     private CityEntity cityByHomeCity;
     private TechSchoolEntity techSchoolByTechSch;
@@ -569,5 +570,14 @@ public class UsersEntity {
 
     public void setPrimarySchoolByPrimarySch(PrimarySchoolEntity primarySchoolByPrimarySch) {
         this.primarySchoolByPrimarySch = primarySchoolByPrimarySch;
+    }
+
+    @OneToMany(mappedBy = "userById")
+    public Collection<AlbumEntity> getAlbumsById() {
+        return albumsById;
+    }
+
+    public void setAlbumsById(Collection<AlbumEntity> albumsById) {
+        this.albumsById = albumsById;
     }
 }

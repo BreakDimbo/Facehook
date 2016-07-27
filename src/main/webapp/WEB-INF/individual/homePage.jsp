@@ -102,7 +102,7 @@
         <table>
             <tr>
                 <td>
-                    <img src="../images/userhead/u1.jpg" width="160px" height="120px"/>
+                    <img src="../images/${loginUser.id}/head/${loginUser.photo}" width="160px" height="120px"/>
                 </td>
             </tr>
             <tr>
@@ -197,7 +197,7 @@
                            class="feed">日志</a>
                     </td>
                     <td class="feedsp" align="center">
-                        <a href="../album.do?flag=myAlbumUI" class="feed">相册</a>
+                        <a href="../album/gotoAlbum" class="feed">相册</a>
                     </td>
                     <td class="feedsp" align="center">
                         <a href="#" class="feed">应用</a>

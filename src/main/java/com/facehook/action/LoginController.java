@@ -50,9 +50,10 @@ public class LoginController {
         if (user != null) {
             session.setAttribute("loginUser", user);
 
-            return "individual/home";
+            //redirect 尽量使用绝对路径
+            return "redirect:/user/gotoHome";
         } else {
-            return "public/index";
+            return "redirect:get";
         }
     }
 

@@ -17,3 +17,8 @@ function stateChange(obj) {
         $(".spe_working").css("display", "none");
     }
 }
+
+function addphoto() {
+    window.location.href = "../album/gotoAddPhoto";
+    
+}
