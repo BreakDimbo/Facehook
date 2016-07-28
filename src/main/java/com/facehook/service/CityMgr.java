@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface CityMgr {
     List<CityEntity> listAllCities();
+
+    List<CityEntity> getCitiesByProId(int pid);
 }

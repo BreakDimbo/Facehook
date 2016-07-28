@@ -28,4 +28,8 @@ public class CityMgrImpl implements CityMgr {
     public List<CityEntity> listAllCities() {
         return cityDao.getAllCities();
     }
+
+    public List<CityEntity> getCitiesByProId(int pid) {
+        return cityDao.getCitiesByProId(pid);
+    }
 }

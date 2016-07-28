@@ -9,11 +9,11 @@
 
 <link rel="stylesheet" href="../css/head.css" type="text/css">
 <script>
-    function changeBD(o) {
+    function changeBG(o) {
         o.style.backgroundColor = '#d30033';
     }
 
-    function changeNM(o) {
+    function changeBG2(o) {
         o.style.backgroundColor = '';
     }
 </script>

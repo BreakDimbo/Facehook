@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface CityDao extends DaoBaseInter {
     List<CityEntity> getAllCities();
+
+    List<CityEntity> getCitiesByProId(int pid);
 }

@@ -6,6 +6,7 @@ package com.facehook.dto;
 public class LoginInfo {
     private String email;
     private String pwd;
+    private String remember;
 
     public String getEmail() {
         return email;
@@ -21,5 +22,13 @@ public class LoginInfo {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public String getRemember() {
+        return remember;
+    }
+
+    public void setRemember(String remember) {
+        this.remember = remember;
     }
 }

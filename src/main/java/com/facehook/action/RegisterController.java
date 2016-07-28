@@ -105,20 +105,28 @@ public class RegisterController {
         user.setRegisterDate(new Date());
         user.setSex(userForm.getSex());
 
-        //创建用户的大学
-        UniversityEntity universityEntity = universityMgr.getUniversityById(Integer.parseInt(userForm.getUniversityId()));
+        if (userForm.getHomePro() != null && userForm.getHomeCity() != null) {
+            user.setHomeCity(new Integer(userForm.getHomePro()));
+            user.setHomePro(new Integer(userForm.getHomeCity()));
 
-        //创建用户对应大学
-        UserUniversityEntity uuni = new UserUniversityEntity();
-        uuni.setUser(user);
-        uuni.setUniversity(universityEntity);
-        uuni.setUserType(userForm.getUserType());
+//System.out.println(userForm.getHomeCity());
+//System.out.println(userForm.getHomePro());
 
-        //保存数据
+        }
+
+
         userMgr.save(user);
-        userUniversityMgr.save(uuni);
 
-
+        //创建用户的大学
+        if (userForm.getUniversityId() != null && !userForm.getUniversityId().trim().equals("")) {
+            UniversityEntity universityEntity = universityMgr.getUniversityById(Integer.parseInt(userForm.getUniversityId()));
+            //创建用户对应大学
+            UserUniversityEntity uuni = new UserUniversityEntity();
+            uuni.setUser(user);
+            uuni.setUniversity(universityEntity);
+            uuni.setUserType(userForm.getUserType());
+            userUniversityMgr.save(uuni);
+        }
 
 
         return "individual/home";

@@ -13,25 +13,18 @@
 <div class="main">
     <div class="reg_login">
         <div class="logForm">
+
+            <%--登录表单--%>
             <form:form action="../login/check" method="post" modelAttribute="loginInfo">
                 <span class="font4">登录邮箱:</span><br/>
                 <form:input type="text"  path="email" /><br/>
                 <span  class="font4">登录密码:</span><br/>
                 <form:password path="pwd" /><br/>
-                <input type="checkbox" /> 自动登录<br/>
-                <input type="submit" value="　登录　" class="sub" />
+                <form:checkbox path="remember" value="true"/> 自动登录<br/>
+                <input type="submit" value="  登录　" class="sub" />
                 　<a href="#">找回密码</a>
             </form:form>
-
-<%-- <form action="/login" method="post">
-    <span class="font4">登录邮箱:</span><br/>
-    <input type="text"  name="email" /><br/>
-    <span  class="font4">登录密码:</span><br/>
-    <input type="password" name="pwd" /><br/>
-    <input type="checkbox" /> 自动登录<br/>
-    <input type="submit" value="　登录　" class="sub" />
-    　<a href="#">找回密码</a>
-</form>--%>
+            <%--end--%>
 
         </div>
         <div class="reg">

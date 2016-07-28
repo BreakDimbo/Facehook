@@ -1,7 +1,9 @@
 package com.facehook.servlet;
 
+import com.facehook.domain.CityEntity;
 import com.facehook.domain.ProvinceEntity;
 import com.facehook.domain.UniversityEntity;
+import com.facehook.service.CityMgr;
 import com.facehook.service.ProvinceMgr;
 import com.facehook.service.UniversityMgr;
 import org.springframework.web.context.WebApplicationContext;
@@ -23,6 +25,7 @@ public class ChangeInfo extends HttpServlet {
 
     private UniversityMgr universityMgr;
     private ProvinceMgr provinceMgr;
+    private CityMgr cityMgr;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -31,6 +34,7 @@ public class ChangeInfo extends HttpServlet {
         WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
         universityMgr = (UniversityMgr) ctx.getBean("universityMgrImpl");
         provinceMgr = (ProvinceMgr) ctx.getBean("provinceMgrImpl");
+        cityMgr = (CityMgr) ctx.getBean("cityMgrImpl");
     }
 
     @Override
@@ -43,10 +47,34 @@ public class ChangeInfo extends HttpServlet {
         String pidStr = req.getParameter("pid");
         String cidStr = req.getParameter("cid");
         String cuidStr = req.getParameter("cuid");
+        String pcidStr = req.getParameter("pcid");
 
-System.out.println(cuidStr);
+System.out.println(pcidStr);
 
-        //如果是改变省的
+
+        //根据省拿出居住城市
+        if (pcidStr != null && !pcidStr.trim().equals("")) {
+            int pcid = Integer.parseInt(pcidStr);
+
+            List<CityEntity> cities = cityMgr.getCitiesByProId(pcid);
+
+            //拼字符串
+            String ssrs = "<allcity>";
+
+            for (CityEntity c : cities) {
+                ssrs += "<city><id>"+ c.getId() +"</id><name>"+c.getName()+"</name></city>";
+            }
+
+            ssrs += "</allcity>";
+
+            out.write(ssrs);
+            out.close();
+
+//System.out.println(ssrs);
+        }
+
+
+        //如果选择国家,则是改变省和大学
         if (cuidStr != null && !cuidStr.trim().equals("")) {
 
             int cuid = Integer.parseInt(cuidStr);
@@ -77,7 +105,7 @@ System.out.println(cuidStr);
         }
 
 
-        //如果是改变大学的
+        //如果选择省, 则是改变大学
         if (pidStr != null && !pidStr.trim().equals("") && cidStr != null && !cidStr.trim().equals("")) {
             int pid = Integer.parseInt(pidStr);
             int cid = Integer.parseInt(cidStr);

@@ -57,20 +57,21 @@
                 <tr class="spe_working">
                     <td class="table_td1">居住地:</td>
                     <td class="table_td2">
-                        <select name="homePro">
-                            <option>--省份--</option>
-                            <option>北京市</option>
-                        </select>
+                        <form:select path="homePro" onchange="setCity(this)">
+                            <form:option value="">--省份--</form:option>
+                            <c:forEach items="${provinceList}" var="province">
+                                <form:option value="${province.id}">${province.name}</form:option>
+                            </c:forEach>
+                        </form:select>
                     </td>
                     <td></td>
                 </tr>
                 <tr class="spe_working">
                     <td class="table_td1">选择城市:</td>
                     <td class="table_td2">
-                        <select name="homeCity">
-                            <option>--城市--</option>
-                            <option>成都市</option>
-                        </select>
+                        <form:select id="citySEL" path="homeCity">
+                            <form:option value="">--城市--</form:option>
+                        </form:select>
                     </td>
                     <td></td>
                 </tr>
