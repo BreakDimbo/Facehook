@@ -85,9 +85,8 @@
                                                     &nbsp;
                                                     <font class="word3">你可以到你的<a href="" class="xh">头像相册</a>里选择照片设置为当前头像</font>
                                                     <br/>
-                                                    <img src="../images/${loginUser.id}/head/${loginUser.photo}"
-                                                         width="200"
-                                                         height="200"/>
+                                                    <img src="../images/${loginUser.id}/head/${loginUser.photo}" onerror="this.src='../images/userhead/default.jpg'" width="160px" height="120px"/>
+
                                                 </td>
                                                 <td valign="top">
                                                     &nbsp;
@@ -109,9 +108,6 @@
                             </tr>
                         </table>
                     </div>
-                </td>
-                <td align="center">
-                    <img src="../images/userhead/u1.jpg"/>
                 </td>
             </tr>
         </table>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" pageEncoding="UTF-8" %>
 
 
@@ -102,7 +103,8 @@
         <table>
             <tr>
                 <td>
-                    <img src="../images/${loginUser.id}/head/${loginUser.photo}" width="160px" height="120px"/>
+                    <img src="../images/${loginUser.id}/head/${loginUser.photo}"
+                         onerror="this.src='../images/userhead/default1.jpg'" width="160px" height="120px"/>
                 </td>
             </tr>
             <tr>
@@ -113,15 +115,13 @@
                 </td>
             </tr>
             <tr>
-                <td onMouseOver="chgTblusers(this)"
-                    onMouseOut="chgTblusers2(this)" id="edit">
+                <td id="edit">
                     &nbsp;
-                    <a href="/basicInfo.jsp" class="xh" id="edita">编辑我的资料</a>
+                    <a href="#" class="xh" id="edita">编辑我的资料</a>
                 </td>
             </tr>
             <tr>
-                <td onMouseOver="chgTblusers(this)"
-                    onMouseOut="chgTblusers2(this)" id="dress">
+                <td id="dress">
                     &nbsp;
                     <a href="#" class="xh" id=dressa>装扮主页</a>
                 </td>
@@ -134,21 +134,21 @@
             <tr>
                 <td>
                     &nbsp;
-                    <font class="word3">所在网络：</font>清华大学代填
+                    <font class="word3">所在网络：</font>
                 </td>
             </tr>
             <tr>
                 <!-- 如果有生日，则显示 -->
                 <td>
                     &nbsp;
-                    <font class="word3">生日：</font>1999-11-11
+                    <font class="word3">生日：</font>${loginUser.birth}
                 </td>
             </tr>
             <tr>
                 <!-- 如果有家乡，则显示 -->
                 <td>
                     &nbsp;
-                    <font class="word3">家乡：</font> 北京 丰台区
+                    <font class="word3">家乡：</font> ${loginUser.provinceByHomePro.name}:${loginUser.cityByHomeCity.name}
                 </td>
             </tr>
             <tr>
@@ -158,8 +158,8 @@
             </tr>
         </table>
 
-        <div class="allkinds">
-            <img src="../images/front/profileleft.jpg"/>
+        <div style="float: left">
+            <img src="../images/front/leftbanner.jpg"/>
         </div>
     </div>
     <!-- 各种信息 -->
@@ -167,11 +167,10 @@
         <!-- 当前信息 -->
         <div class="curInfo">
             &nbsp;
-            <font class="word2">三少爷 </font>&nbsp;
-            <img src="../images/front/star.gif"/>
+            <font class="word2">${loginUser.name}</font>&nbsp;
             &nbsp;
             <font class="word4">有（4）人看过</font>&nbsp;
-            <font class="word3">什么也没做做 </font>&nbsp;
+            <font class="word3">什么也没做</font>&nbsp;
             <a href="#" class="xh">编辑</a>
         </div>
         <!-- 选择你的操作 -->
@@ -193,7 +192,7 @@
                            id="aInfo">资料</a>
                     </td>
                     <td class="feedsp" align="center">
-                        <a href="/blog.do?type=blog&oid=xx&pageNo=1&year=0&month=0"
+                        <a href="#"
                            class="feed">日志</a>
                     </td>
                     <td class="feedsp" align="center">
@@ -238,66 +237,28 @@
                 <tr>
                     <td align="left" colspan="3">
                         <font class="STYLE3">相册</font>
-                        <a href="/album.do?type=album&oid=xx&pageNo=1" class="xh">（5）</a>
                     </td>
                     <td align="right">
-                        <a href="album.do?type=album&oid=xx&pageNo=1" class="xh">查看全部相册</a>
+                        <a href="#" class="xh">查看全部相册</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <a href="album.do?type=oneAlbum&oid=xx&pageNo=1&aid=xx"
-                           style="border: 1px #D8DFEA solid;" onmouseover="chgImg(this)"
-                           onmouseout="chgImg2(this)" id="a100"> <img
-                                src="../images/photos/t4.jpg" width="100px" height="75px"
-                                style="border: 5px #FFFFFF solid;" id="aa100"/> </a>
-                        <br/>
-                        <b> <a
-                                href="album.do?type=oneAlbum&oid=|oid|&pageNo=1&aid=|al.getAlId()|"
-                                class="xh" style="font-weight: bold;">我的相册名</a> </b>
-                        <br/>
-                        <span class="word4">更新于2010年06月08日</span>
-                    </td>
                     <!-- 这里循环显示最多四个最新更新的相册即可 -->
-                    <td>
-                        <a href="album.do?type=oneAlbum&oid=xx&pageNo=1&aid=xx"
-                           style="border: 1px #D8DFEA solid;" onmouseover="chgImg(this)"
-                           onmouseout="chgImg2(this)" id="a100"> <img
-                                src="../images/photos/t4.jpg" width="100px" height="75px"
-                                style="border: 5px #FFFFFF solid;" id="aa100"/> </a>
-                        <br/>
-                        <b> <a
-                                href="album.do?type=oneAlbum&oid=|oid|&pageNo=1&aid=|al.getAlId()|"
-                                class="xh" style="font-weight: bold;">我的相册名</a> </b>
-                        <br/>
-                        <span class="word4">更新于2010年06月08日</span>
-                    </td>
-                    <td>
-                        <a href="album.do?type=oneAlbum&oid=xx&pageNo=1&aid=xx"
-                           style="border: 1px #D8DFEA solid;" onmouseover="chgImg(this)"
-                           onmouseout="chgImg2(this)" id="a100"> <img
-                                src="../images/photos/t4.jpg" width="100px" height="75px"
-                                style="border: 5px #FFFFFF solid;" id="aa100"/> </a>
-                        <br/>
-                        <b> <a
-                                href="album.do?type=oneAlbum&oid=|oid|&pageNo=1&aid=|al.getAlId()|"
-                                class="xh" style="font-weight: bold;">我的相册名</a> </b>
-                        <br/>
-                        <span class="word4">更新于2010年06月08日</span>
-                    </td>
-                    <td>
-                        <a href="album.do?type=oneAlbum&oid=xx&pageNo=1&aid=xx"
-                           style="border: 1px #D8DFEA solid;" onmouseover="chgImg(this)"
-                           onmouseout="chgImg2(this)" id="a100"> <img
-                                src="../images/photos/t4.jpg" width="100px" height="75px"
-                                style="border: 5px #FFFFFF solid;" id="aa100"/> </a>
-                        <br/>
-                        <b> <a
-                                href="album.do?type=oneAlbum&oid=|oid|&pageNo=1&aid=|al.getAlId()|"
-                                class="xh" style="font-weight: bold;">我的相册名</a> </b>
-                        <br/>
-                        <span class="word4">更新于2010年06月08日</span>
-                    </td>
+                    <c:forEach var="i" begin="1" end="4">
+                        <td>
+                            <a href="../album/gotoAlbum"
+                               style="border: 1px #D8DFEA solid;" onmouseover="chgImg(this)"
+                               onmouseout="chgImg2(this)" id="a100">
+                                <img src="../images/${loginUser.id}/album/${album}"
+                                     onerror="this.src='../images/userhead/default2.jpg'"
+                                     style="border: 5px #FFFFFF solid;" id="aa100"/>
+                            </a>
+                            <br/>
+                            <b> <a
+                                    class="xh" style="font-weight: bold;">${album.name}</a> </b>
+                            <br/>
+                        </td>
+                    </c:forEach>
                 </tr>
             </table>
         </div>
@@ -381,7 +342,7 @@
                         <font class="word4">性别：</font>
                     </td>
                     <td>
-                        男
+                        ${loginUser.sex}
                     </td>
                 </tr>
 
@@ -391,7 +352,7 @@
                         <font class="word4">生日：</font>
                     </td>
                     <td>
-                        1999-11-11
+                        ${loginUser.birth}
                     </td>
                 </tr>
                 <!-- 如果有家乡，则显示 -->
@@ -400,7 +361,7 @@
                         <font class="word4">家乡：</font>
                     </td>
                     <td>
-                        北京 丰台区
+                        ${loginUser.provinceByHomePro.name}:${loginUser.cityByHomeCity.name}
                     </td>
                 </tr>
 
@@ -422,7 +383,7 @@
                         <font class="word4">兴趣爱好：</font>
                     </td>
                     <td>
-                        胡侃, 瞎掰, 电玩, 武侠, 历史, 体育,电 脑, 曲艺, 做梦, 思考
+                        ${loginUser.interest}
                     </td>
                 </tr>
                 <!-- 如果有喜欢的书籍 -->
@@ -431,7 +392,7 @@
                         <font class="word4">喜欢书籍：</font>
                     </td>
                     <td>
-                        笑傲江湖,小李飞刀,三国演义,孙子兵法与三十六计
+                        ${loginUser.book}
                     </td>
                 </tr>
                 <!-- 如果有喜欢的音乐 -->
@@ -450,7 +411,7 @@
                         <font class="word4">喜欢电影：</font>
                     </td>
                     <td>
-                        勇敢的心, 阿甘正传, 后天, 邵氏电影
+                        勇敢的心, 阿甘正传
                     </td>
                 </tr>
                 <!-- 如果有喜欢的卡通 -->
@@ -459,7 +420,7 @@
                         <font class="word4">喜欢动漫：</font>
                     </td>
                     <td>
-                        圣斗士, 柯南, 太空堡垒I, 变形金刚, 足球小将, 灌篮高手, 机器猫, 高智能方程式赛车, 天空战记, 羚羊号历险记
+                        圣斗士, 柯南, 太空堡垒I, 变形金刚, 足球小将, 灌篮高手, 机器猫, 高智能方程式赛车, 天空战记
                     </td>
                 </tr>
                 <!-- 如果有喜欢的运动 -->
@@ -640,12 +601,12 @@
                 <tr>
                     <td rowspan="2" width="8%">
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="50px"/> </a>
                     </td>
                     <td>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">三少爷用户名</a>
-                        (首都医科大学)&nbsp;
-                        <font class="word3">留言日期2001-11-11 17:44</font>
+                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
+                       &nbsp;
+                        <font class="word3">留言日期:1984-11-11 17:44</font>
                     </td>
                     <td>
                         <a href="javascript:void(0);" class="xh" id="xx"
@@ -654,37 +615,12 @@
                 </tr>
                 <tr>
                     <td rowspan="2">
-                        留言具体内容!!!
+                        「浪漫的精髓在于不确定性。」
                     </td>
                 </tr>
             </table>
         </div>
         <!-- 留言内容 end -->
-        <!-- 留言的内容，最多显示10条即可 -->
-        <div class="mess_con">
-            <table>
-                <tr>
-                    <td rowspan="2" width="8%">
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/> </a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">三少爷用户名</a>
-                        (首都医科大学)&nbsp;
-                        <font class="word3">留言日期2001-11-11 17:44</font>
-                    </td>
-                    <td>
-                        <a href="javascript:void(0);" class="xh" id="xx"
-                           onclick="delgossip(this)">删除</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="2">
-                        留言具体内容!!!
-                    </td>
-                </tr>
-            </table>
-        </div>
         <p style="float: right; margin: 15px 10px 0 auto">
             <a href="#">查看全部留言>></a>
         </p>
@@ -707,14 +643,14 @@
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
+                                src="../images/userhead/default.jpg" width="70px" height="50px"/>
                         </a>
                     </td>
                     <td>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
+                        <a href="profile.do?type=feed&oid=xx" class="xh"></a>
                     </td>
                     <td>
-                        <font class="word4">好兄弟讲义气!</font>
+                        <font class="word4">綾波レイ</font>
                     </td>
                 </tr>
             </table>
@@ -732,22 +668,9 @@
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
+                                src="../images/userhead/default.jpg" width="70px" height="50px"/>
                         </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
-                        </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
-                        </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-
+                        <a href="profile.do?type=feed&oid=xx" class="xh"></a>
                     </td>
                 </tr>
             </table>
@@ -759,29 +682,16 @@
             <table>
                 <tr>
                     <td align="left" style="line-height: 27px" colspan="3">
-                        <font class="STYLE3">好友(11)</font>
+                        <font class="STYLE3">好友(1)</font>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
+                                src="../images/userhead/default.jpg" width="70px" height="50px"/>
                         </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
-                        </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xxx"> <img
-                                src="../images/userhead/u1.gif" width="50px" height="50px"/>
-                        </a>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">香香</a>
-
+                        <a href="profile.do?type=feed&oid=xx" class="xh"></a>
                     </td>
                 </tr>
             </table>
@@ -790,6 +700,6 @@
     </div>
 </div>
 <!-- 引入foot.jsp -->
-<jsp:include page="../public/foot.jsp"></jsp:include>
+<jsp:include page="../public/foot.jsp"/>
 </body>
 </html>

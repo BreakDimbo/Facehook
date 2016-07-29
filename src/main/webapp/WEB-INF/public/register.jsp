@@ -33,7 +33,7 @@
                 <tr>
                     <td class="table_td1">姓名:</td>
                     <td class="table_td2"><form:input type="text" path="name"/></td>
-                    <td><span class="spanVal">请输入真实姓名</span></td>
+                    <td class="error"><form:errors path="name"/></td>
                 </tr>
                 <tr>
                     <td class="table_td1">性别:</td>
@@ -104,19 +104,23 @@
                 </tr>
                 <%--大学生 end--%>
                 <tr>
-                    <td class="table_td1">电子邮箱:<br>&nbsp;</td>
-                    <td class="table_td2"><form:input type="text" path="email"/><br>
-                        <span style="font-size: 12px">没有邮箱? <a href="#">注册 Gmail</a></span></td>
+                    <td class="table_td1">电子邮箱: </td>
+                    <td class="table_td2"><form:input type="text" path="email"/></td>
+                    <td class="error" style=": 0px;"><form:errors path="email"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span style="font-size: 12px">没有邮箱? <a href="http://gmail-emaillogin.com/gmail-sign-up">注册 Gmail</a></span></td>
                 </tr>
                 <tr>
                     <td class="table_td1">设置密码</td>
-                    <td class="table_td2"><form:password path="pwd"/></td>
-                    <td></td>
+                    <td class="table_td2"><form:password path="pwd" id="pwd1"/></td>
+                    <td class="error"><form:errors path="pwd"/></td>
                 </tr>
                 <tr>
                     <td class="table_td1">确认密码:</td>
-                    <td class="table_td2"><form:password path="pwd2"/></td>
-                    <td></td>
+                    <td class="table_td2"><form:password path="pwd2" id="pwd2"/></td>
+                    <td id="error"></td>
                 </tr>
                 <tr>
                     <td class="table_td1">验证码:</td>
@@ -126,7 +130,7 @@
                 </tr>
                 <tr>
                     <td class="table_td1"></td>
-                    <td class="table_td2"><input type="submit" name="submit" class="button1" value=""></td>
+                    <td class="table_td2"><input type="submit" name="submit" class="button1" value="" onclick="return checkpwd()"></td>
                     <td></td>
                 </tr>
                 <tr>

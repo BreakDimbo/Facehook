@@ -21,6 +21,7 @@ public class UsersEntity {
     private String sex;
     private Integer homePro;
     private Integer homeCity;
+    private Integer albums;
     private Date birth;
     private String tel;
     private String mobile;
@@ -137,6 +138,16 @@ public class UsersEntity {
 
     public void setHomeCity(Integer homeCity) {
         this.homeCity = homeCity;
+    }
+
+    @Basic
+    @Column(name = "albums", nullable = true)
+    public Integer getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Integer albums) {
+        this.albums = albums;
     }
 
     @Basic
@@ -580,4 +591,6 @@ public class UsersEntity {
     public void setAlbumsById(Collection<AlbumEntity> albumsById) {
         this.albumsById = albumsById;
     }
+
+
 }

@@ -1,12 +1,27 @@
 package com.facehook.dto;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Pattern;
+
 /**
  * Created by Break.D on 7/25/16.
  */
 public class UserForm {
+
+    @NotEmpty(message = "用户名不能为空")
     private String name;
+
+    @NotEmpty(message = "邮箱不能为空")
+    @Email(message = "邮箱格式不正确")
     private String email;
+
+    @NotEmpty(message = "密码不能为空")
+    @Length(min=6,max=16,message="密码长度不正确，需要在6-16之间")
     private String pwd;
+
     private String pwd2;
     private String photo;
     private String sex;

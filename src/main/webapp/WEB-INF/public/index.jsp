@@ -28,11 +28,11 @@
 
         </div>
         <div class="reg">
-            <span class="font5">注册</span><br/>
-            <a>校内期待你的加入</a>
+            <span class="font5">上车</span><br/>
+            <a>期待你的加入</a>
         </div>
         <div class="mobile_login">
-            <span class="font5">手机登录</span><br/>
+            <span class="font5">老司机</span><br/>
             <a href="#">请访问m.xiaonei.com </a>
         </div>
     </div>
@@ -65,9 +65,9 @@
     </div>
     <!-- 建议 -->
     <div class="advice">
-        10月16日 狗狗：全新界面登场 <br/>
-        10月15日 相册预加载和FLASH版上传，浏览相册更快更爽<br/>
-        10月14日 留言板新增“悄悄话”功能 <br/>
+        「最后，漂亮的封面很重要。我不关心里面有多好，但一点都不想在难看的东西上花时间。我浅薄，我想。」 <br/>
+         彻底的「庸俗」有着独特的魅力。而半吊子的「文艺」真是令人尴尬，就像这句话一样。<br/>
+        「浪漫的精髓就在于它的不确定性。」 <br/>
     </div>
 </div>
 <jsp:include page="foot.jsp" />

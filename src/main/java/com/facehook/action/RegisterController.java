@@ -7,12 +7,15 @@ import com.facehook.dto.UserForm;
 import com.facehook.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.Date;
 
 /**
@@ -87,15 +90,26 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String userForm(Model model) {
+    public String createUserForm(Model model) {
         UserForm userForm = new UserForm();
         model.addAttribute("userForm", userForm);
         return "forward:getInfo";
     }
 
-    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public String userFormSubmit(@ModelAttribute("userForm") UserForm userForm, Model model) {
 
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+    public String userFormSubmit(@Valid @ModelAttribute("userForm") UserForm userForm, BindingResult bindingResult, HttpSession session) {
+
+        System.out.println(bindingResult.hasErrors());
+
+
+        //保证密码前后一致。使用 JavaScript 实现
+
+
+        //其他错误
+        if (bindingResult.hasErrors()) {
+            return "forward:getInfo";
+        }
 
         UsersEntity user = new UsersEntity();
         user.setName(userForm.getName());
@@ -105,9 +119,12 @@ public class RegisterController {
         user.setRegisterDate(new Date());
         user.setSex(userForm.getSex());
 
-        if (userForm.getHomePro() != null && userForm.getHomeCity() != null) {
-            user.setHomeCity(new Integer(userForm.getHomePro()));
-            user.setHomePro(new Integer(userForm.getHomeCity()));
+        String homePro = userForm.getHomePro();
+        String homeCity = userForm.getHomeCity();
+
+        if (homePro != null && !homePro.trim().equals("") && homeCity != null && !homeCity.trim().equals("")) {
+            user.setHomeCity(new Integer(userForm.getHomeCity()));
+            user.setHomePro(new Integer(userForm.getHomePro()));
 
 //System.out.println(userForm.getHomeCity());
 //System.out.println(userForm.getHomePro());
@@ -128,6 +145,7 @@ public class RegisterController {
             userUniversityMgr.save(uuni);
         }
 
+        session.setAttribute("loginUser", user);
 
         return "individual/home";
     }

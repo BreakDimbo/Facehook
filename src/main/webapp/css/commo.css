@@ -86,3 +86,7 @@ a:hover {
     width: 220px;
     height: 14px;
 }
+
+.error {
+    color: red;
+}

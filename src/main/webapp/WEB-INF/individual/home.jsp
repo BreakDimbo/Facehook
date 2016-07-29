@@ -53,7 +53,7 @@
                         <img src="../images/front/photo.gif"/>
                     </td>
                     <td>
-                        <a href="" class="yy">相册</a>
+                        <a href="../album/gotoAlbum" class="yy">相册</a>
                     </td>
                     <td>
                         <a href="#" class="xh" style="color: #808080">上传</a>
@@ -105,19 +105,16 @@
                 </tr>
             </table>
         </div>
-        <div class="home_ad">
-            <img src="../images/front/homeleft.jpg"/>
-        </div>
     </div>
     <div class="content">
         <div class="profile">
             <table>
                 <tr>
                     <td rowspan="3" width="193px">
-                        <img src="../images/userhead/u1.jpg" width="160px" height="120px"/>
+                        <img src="../images/${loginUser.id}/head/${loginUser.photo}" onerror="this.src='../images/userhead/default1.jpg'" width="160px" height="120px"/>
                     </td>
                     <td colspan="4" class="word2">
-                        綾波レイ
+                        ${loginUser.name}
                     </td>
                 </tr>
                 <tr>
@@ -199,22 +196,22 @@
             <table>
                 <tr>
                     <td class="STYLE3" align="left" colspan="9">
-                        武汉理工大学 人气之星
+                        人气之星
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
@@ -233,17 +230,17 @@
                 </tr>
                 <tr>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
-                        <a><img src="../images/userhead/u1.jpg" width="80px"
+                        <a><img src="../images/userhead/default.jpg" width="80px"
                                 height="60px"/> </a>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
@@ -253,7 +250,7 @@
     </div>
 
     <div class="linkman">
-        <!-- 最近来访，最多选取六个即可  start-->
+        <!-- 最近来访, start-->
         <div class="linkman_last">
             <table>
                 <tr>
@@ -268,7 +265,7 @@
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
@@ -277,7 +274,7 @@
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
@@ -286,36 +283,7 @@
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-								<span class="word3">11月11日<!-- 这是该人加入时间 -->
-								</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-								<span class="word3">11月11日<!-- 这是该人加入时间 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-								<span class="word3">11月11日<!-- 这是该人加入时间 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
@@ -325,9 +293,9 @@
                 </tr>
             </table>
         </div>
-        <!-- 最近来访，最多选取六个即可  end-->
+        <!-- 最近来访  end-->
 
-        <!-- 你可能认识的人，最多选取六个即可  start-->
+        <!-- 你可能认识的人  start-->
         <div class="may_know">
             <table>
                 <tr>
@@ -342,121 +310,32 @@
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                 </tr>
-            </table>
-        </div>
-        <!-- 你可能认识的人，最多选取六个即可  end-->
-        <!-- 好友生日提示，最多选取六个即可  start-->
-        <div class="birth_linkman">
-            <table>
-                <tr>
-                    <td style="line-height: 25px" colspan="2">
-                        <span class="STYLE3">好友生日</span>
-                        <font class="word3">(7)</font>
-                    </td>
-                    <td style="line-height: 25px;" align="right">
-                        <a href="/self/myfoot.jsp" class="xh">更多>></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-								<span class="word3">11月11日<!-- 这是该人的生日 -->
-								</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!-- 好友生日提示，最多选取六个即可  end-->
 
-        <!-- 在线好友，最多选取六个即可  start-->
+            </table>
+        </div>
+        <!-- 你可能认识的人  end-->
+
+        <!-- 在线好友，start-->
         <div class="linkman_online">
             <table>
                 <tr>
@@ -471,44 +350,21 @@
                 <tr>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
                     </td>
                     <td>
                         <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
-                        <!-- 如果该人在线，则显示 -->
-                        <img src="../images/front/online.gif"/>
-                        <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
-                    </td>
-                    <td>
-                        <a href="profile.do?type=feed&oid=xx"> <img
-                                src="../images/userhead/u14.gif" width="55px" height="55px"/> </a>
+                                src="../images/userhead/default.jpg" width="70px" height="55px"/> </a>
                         <!-- 如果该人在线，则显示 -->
                         <img src="../images/front/online.gif"/>
                         <a href="profile.do?type=feed&oid=xx" class="xh">綾波レイ</a>
@@ -516,11 +372,11 @@
                 </tr>
             </table>
         </div>
-        <!-- 最近来访，最多选取六个即可  end-->
+        <!-- 最近来访，end-->
     </div>
 </div>
 <!-- 引入foot.jsp -->
-<jsp:include page="../public/foot.jsp"></jsp:include>
+<jsp:include page="../public/foot.jsp"/>
 </body>
 </html>
 

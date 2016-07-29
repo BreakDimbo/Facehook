@@ -26,6 +26,14 @@
         </dependency>
         <!--end-->
 
+        <!--slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <!--end-->
+
         <!--spring start-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -55,6 +63,18 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.2.1.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.3.0.Alpha1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
         <!--end-->
 
         <!--aspectj start-->
@@ -108,16 +128,7 @@
         </dependency>
         <!--end-->
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>io.spring.repo.maven.release</id>
-            <url>http://repo.spring.io/release/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+    
     <build>
         <finalName>Facehook</finalName>
         <plugins>
