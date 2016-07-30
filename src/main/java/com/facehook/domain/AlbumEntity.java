@@ -12,6 +12,7 @@ public class AlbumEntity {
     private String name;
     private String descript;
     private String privilege;
+    private Integer user_id;
     private UsersEntity userById;
 
     @Id
@@ -54,7 +55,15 @@ public class AlbumEntity {
         this.privilege = privilege;
     }
 
+    @Basic
+    @Column(name = "user_id", nullable = true)
+    public Integer getUser_id() {
+        return user_id;
+    }
 
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
 
     @Override
     public boolean equals(Object o) {
