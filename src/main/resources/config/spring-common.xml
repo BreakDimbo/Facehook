@@ -39,7 +39,9 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.connection.pool_size">5</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
+
+                <!--该配置非常坑爹,会导致在其他环境运行时出错,一般只在编译时开启-->
+                <!--<prop key="hibernate.hbm2ddl.auto">update</prop>-->
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">true</prop>
             </props>

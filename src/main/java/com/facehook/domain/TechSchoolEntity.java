@@ -15,7 +15,6 @@ public class TechSchoolEntity {
     private Integer townId;
     private CityEntity cityByCityId;
     private TownEntity townByTownId;
-    private Collection<UsersEntity> usersesById;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -102,12 +101,4 @@ public class TechSchoolEntity {
         this.townByTownId = townByTownId;
     }
 
-    @OneToMany(mappedBy = "techSchoolByTechSch")
-    public Collection<UsersEntity> getUsersesById() {
-        return usersesById;
-    }
-
-    public void setUsersesById(Collection<UsersEntity> usersesById) {
-        this.usersesById = usersesById;
-    }
 }

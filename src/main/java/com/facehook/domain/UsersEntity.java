@@ -28,7 +28,6 @@ public class UsersEntity {
     private String oicq;
     private String msn;
     private String website;
-    private Integer techSch;
     private Integer techSchYear;
     private Integer juniorSch;
     private Integer juniorYear;
@@ -55,7 +54,6 @@ public class UsersEntity {
     private Collection<AlbumEntity> albumsById;
     private ProvinceEntity provinceByHomePro;
     private CityEntity cityByHomeCity;
-    private TechSchoolEntity techSchoolByTechSch;
     private JuniorEntity juniorByJuniorSch;
     private PrimarySchoolEntity primarySchoolByPrimarySch;
 
@@ -210,15 +208,6 @@ public class UsersEntity {
         this.website = website;
     }
 
-    @Basic
-    @Column(name = "techSch", nullable = true)
-    public Integer getTechSch() {
-        return techSch;
-    }
-
-    public void setTechSch(Integer techSch) {
-        this.techSch = techSch;
-    }
 
     @Basic
     @Column(name = "techSchYear", nullable = true)
@@ -441,7 +430,6 @@ public class UsersEntity {
         if (oicq != null ? !oicq.equals(that.oicq) : that.oicq != null) return false;
         if (msn != null ? !msn.equals(that.msn) : that.msn != null) return false;
         if (website != null ? !website.equals(that.website) : that.website != null) return false;
-        if (techSch != null ? !techSch.equals(that.techSch) : that.techSch != null) return false;
         if (techSchYear != null ? !techSchYear.equals(that.techSchYear) : that.techSchYear != null) return false;
         if (juniorSch != null ? !juniorSch.equals(that.juniorSch) : that.juniorSch != null) return false;
         if (juniorYear != null ? !juniorYear.equals(that.juniorYear) : that.juniorYear != null) return false;
@@ -482,7 +470,6 @@ public class UsersEntity {
         result = 31 * result + (oicq != null ? oicq.hashCode() : 0);
         result = 31 * result + (msn != null ? msn.hashCode() : 0);
         result = 31 * result + (website != null ? website.hashCode() : 0);
-        result = 31 * result + (techSch != null ? techSch.hashCode() : 0);
         result = 31 * result + (techSchYear != null ? techSchYear.hashCode() : 0);
         result = 31 * result + (juniorSch != null ? juniorSch.hashCode() : 0);
         result = 31 * result + (juniorYear != null ? juniorYear.hashCode() : 0);
@@ -553,15 +540,6 @@ public class UsersEntity {
         this.cityByHomeCity = cityByHomeCity;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "techSch", referencedColumnName = "id", insertable = false, updatable = false)
-    public TechSchoolEntity getTechSchoolByTechSch() {
-        return techSchoolByTechSch;
-    }
-
-    public void setTechSchoolByTechSch(TechSchoolEntity techSchoolByTechSch) {
-        this.techSchoolByTechSch = techSchoolByTechSch;
-    }
 
     @ManyToOne
     @JoinColumn(name = "juniorSch", referencedColumnName = "id", insertable = false, updatable = false)
