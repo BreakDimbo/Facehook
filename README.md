@@ -50,8 +50,21 @@ MyTools.myUpload(session, photo, user.getId());
     + 因为在注册时允许用户选择大学，居住地，等等，所以需要 spring 提前各个 domain 的 service 注入。
     + createUserForm（）创建 Model，接收表单提交的数据。
     + gotoRegister（）将国家、部分省、部分大学放进 request 里，用作初始化时的显示。
-    + userFormSubmit（）首先判断表单提交新是否有误。
-* dao
-* dto
-* domain
-* service
+    + userFormSubmit（）首先判断表单提交信息是否有误。利用 UserMgr.save()储存用户到持久层。并储存大学信息。最后设置 session。
+  - UploadController：控制图片的上传
+    + uploadAvatar（）从 session拿到用户信息，利用MyTools.myUpload(session, photo, user.getId())上传至服务器。
+* dao：数据持久层，负责与数据库进行交互
+  - base:通用操作（增删改查）——事务处理
+    + BaseDaoInter
+    + BaseDaoImpl
+  - interface：每个 domain 对应的 dao 接口，继承 BaseDaoInter
+  - impl:每个接口对应的实现，继承 BaseDaoImpl，实现 interface
+* dto：临时数据存贮层,主要用于存储表单提交来的数据。
+  - AlbumInfo
+  - LoginInfo
+  - UploadInfo
+  - UserForm
+* domain：对应数据库的对象（由数据表逆向工程生成）
+* service：主要处理对象和业务逻辑，底层调用 dao 部分与数据库交互
+  - interface
+  - impl
