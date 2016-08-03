@@ -40,9 +40,17 @@ MyTools.myUpload(session, photo, user.getId());
 
 ## 分层设计：
 
-* action
-  - 主要是 SpringMVC 的各个 Controller，负责业务逻辑的控制
-  - 
+* action: 主要是 SpringMVC 的各个 Controller，负责业务逻辑的控制
+  - UserController：负责 home.jsp 和 homePage.jsp 的跳转
+  - LoginController: 验证登录信息
+    + getLoginInfo（）：创建 Model 装进 View 里，用来装表格提交的数据。检查cookie 是否已经设置自动登录。
+    + checkLoginInfo（）：接收 View 传来的 Model 并核实用户信息（UserMgr.check()）,设置 session，根据是否自动登录设置 cookies。确认登录成功或失败。
+    + logout（）：消灭 session，消灭 cookie。
+  - RegisterController:控制注册相关行为
+    + 因为在注册时允许用户选择大学，居住地，等等，所以需要 spring 提前各个 domain 的 service 注入。
+    + createUserForm（）创建 Model，接收表单提交的数据。
+    + gotoRegister（）将国家、部分省、部分大学放进 request 里，用作初始化时的显示。
+    + userFormSubmit（）首先判断表单提交新是否有误。
 * dao
 * dto
 * domain
